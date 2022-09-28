@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+# Links que vou usar e import 
+import 'animate.css';
+
+github : https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s1-hamburgueria-da-kenzie-douglasb834-17
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
