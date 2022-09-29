@@ -7,7 +7,7 @@ export const Tost = (text, color) => {
             x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
             y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
           },
-        duration: 3000,
+        duration: 1000,
         newWindow: true,
         close: true,
         gravity: "top", // `top` or `bottom`

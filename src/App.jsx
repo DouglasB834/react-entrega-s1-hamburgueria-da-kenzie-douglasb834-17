@@ -1,41 +1,52 @@
 
 import {useEffect, useState } from 'react';
-import './styles/index.css';
 import { instance } from './service/instancia';
 import { ProductContext } from './Context';
-import { ToastContainer, toast } from 'react-toastify';
+
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Toast =()=>{
-  toast("passando uma msg ")
-}
+import './styles/index.css';
+import { ProductsList } from './components/ProductsList';
+
+import { Header } from './components/Header';
+import { Cart } from './components/Cart';
+import Main from './components/Main/Main';
+
+// const Toast =()=>{
+//   toast("passando uma msg ")
+// }
 
 function App() {
-  const [produtos, setProdutos] = useState([])
-  // const [loading, setLoading] = useState()
+  const [products, setProducts] = useState([])
+  const [filteredProducts, setFilteredProducts] = useState([])
+  const [ search,  setSearch] = useState([])
+  
+
   useEffect(()=>{
     //timeOut  loading false
     instance.get(`/products`)
-    .then(({data}) =>{
-      Toast()
-       setProdutos(data)}
-    
-    )
+    .then(res =>{
+      setProducts(res.data)
+      setSearch(res.data)      
+    })
     .catch(error => console.log(error))
-
   },[])
 
-  console.log(produtos)
   return (
     <div>
+      <ProductContext.Provider value={{products, setProducts, filteredProducts,setFilteredProducts,  search,  setSearch}}>
+    <div>
+      <Header/>
+      <Main>
+        <ProductsList />
+        <Cart/>        
+      </Main>
 
-    <main>
-      <ProductContext.Provider value={{produtos, setProdutos}}>
-      
+    
+    </div>
+      </ProductContext.Provider>
 
-
-      </ProductContext.Provider>     
-    </main>
     <ToastContainer/>
     </div>
   );
