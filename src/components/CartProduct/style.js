@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
-
 export const LiCart = styled.li`
 min-width: 300px;
 width: 92%;
 display: flex;
 background-color: var(--gra-0);
 margin: 10px 0 0 10px;
-
 
 figure{
     max-width: 70px;

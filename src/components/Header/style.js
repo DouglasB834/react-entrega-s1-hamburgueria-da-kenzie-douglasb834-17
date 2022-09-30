@@ -3,13 +3,11 @@ import styled from "styled-components";
 export const HeaderStyled = styled.header`
 width: 100%;
 height: 139px;
-
 display: flex;
 justify-content: center;
 align-items: center;
 background-color: var(--gray-0);
 box-shadow: -1px -2px 8px 0px var(--gray-50);
-
 
 >div{
     width: 98%;
@@ -25,7 +23,6 @@ div > div {
 
 div >div img{
     width: 100%;
-
 }
 
 .search div{
@@ -35,6 +32,7 @@ div >div img{
     border-radius: 7px;
     background-color: #fff ;
     border: solid 2px var(--gray-20);
+
 }
 
 .search div input{
@@ -42,6 +40,7 @@ div >div img{
     border: none;
     outline: none;
 }
+
 .search div input::placeholder{
     color: var(--gray-20);
 }
@@ -50,10 +49,8 @@ div >div img{
     border-radius: 5px;
 }
 
-
 @media (min-width: 720px){
     height: 80px;
-
     >div{
         width: 90%;
     flex-direction: row;
@@ -71,7 +68,6 @@ div >div img{
     margin-left: 1.2rem;
 
 }
-
 }
 
 `

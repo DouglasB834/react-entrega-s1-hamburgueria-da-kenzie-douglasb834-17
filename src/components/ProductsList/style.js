@@ -5,7 +5,6 @@ display: flex;
 overflow: auto;
 gap: 1rem;
 margin-top: 1.9rem;
-/* flex-wrap: wrap; */
 margin-bottom: 1rem;
 padding-top: 1rem;
 margin-right: 1rem;

@@ -8,8 +8,6 @@ max-height: 495px;
 background-color: var(--gray-0);
 
 
-
-
 .title2 {
     display: flex;
     align-items: center;
@@ -17,7 +15,6 @@ background-color: var(--gray-0);
     height: 65px;    
     background-color: var(--color-primary); 
     border-radius: 5px 5px 0 0;
-    
 
 }
 
@@ -32,8 +29,6 @@ background-color: var(--gray-0);
     margin-right: 1rem ;
 } 
 
-
-
 `
 export const UlCart  = styled.ul`
 gap: 1rem;
@@ -43,7 +38,6 @@ overflow: auto;
 flex-direction: column;
 
 `
-
 
 export const DivCartEmpty =styled.div`
 display: flex;

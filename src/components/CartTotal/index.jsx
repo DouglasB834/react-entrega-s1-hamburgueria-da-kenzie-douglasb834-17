@@ -1,8 +1,8 @@
 import { CartTotalStyle } from "./style"
 
 
-export const CartTotal = ({filteredProducts}) => {
-const total = filteredProducts.reduce((acc,act) =>  acc+act.price ,0).toFixed(2).replace(".",",")
+export const CartTotal = ({filteredProducts, setFilteredProducts}) => {
+const total = filteredProducts.reduce((acc,act) =>  acc+act.price * act.count ,0).toFixed(2).replace(".",",")
   return (
     <CartTotalStyle>
 
@@ -12,7 +12,7 @@ const total = filteredProducts.reduce((acc,act) =>  acc+act.price ,0).toFixed(2)
       </div>
 
         <div>
-            <button>Remover todos</button>
+            <button onClick={()=>setFilteredProducts([])} >Remover todos</button>
         </div>
     </CartTotalStyle>
   )

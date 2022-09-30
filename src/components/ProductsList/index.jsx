@@ -5,9 +5,7 @@ import { Ulstyled } from "./style"
 
 
 export const ProductsList =()=> {
-
   const {products} = useContext(ProductContext)
-
   return (
     <Ulstyled>   
       {

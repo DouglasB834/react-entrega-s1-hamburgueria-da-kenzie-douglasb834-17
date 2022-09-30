@@ -1,5 +1,5 @@
 
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { toast } from "react-toastify"
 import { ProductContext } from "../../Context"
 import { CartProduct } from "../CartProduct"
@@ -14,28 +14,24 @@ export const Cart = () => {
       autoClose: 400,
     })
   }
-  const {filteredProducts, setFilteredProducts} = useContext(ProductContext)
-   const handleRemove =(item)=>{  
-      
-     const removeItem = filteredProducts.filter(element =>{
 
-      Toast()
+  const {filteredProducts, setFilteredProducts} = useContext(ProductContext)
+  
+  //função de rmeover
+   const handleRemove =(item)=>{  
+     const removeItem = filteredProducts.filter(element =>{
+      // Toast()
       return element !== item
      }) 
      setFilteredProducts(removeItem)
-    
   }
-
   
-
-   
-
   return (
     <DivCart>
       <div className="title2">
         <h2>Carinho de compras </h2>
        
-        <p>itens {1}</p>
+        <p>itens {filteredProducts.length}</p>
       </div>
       { filteredProducts.length > 0 ? (
         <>
@@ -46,7 +42,7 @@ export const Cart = () => {
         
         </UlCart>
 
-        <CartTotal filteredProducts={filteredProducts}/>
+        <CartTotal filteredProducts={filteredProducts} setFilteredProducts={setFilteredProducts}/>
         </>
 
       ):(
@@ -58,8 +54,6 @@ export const Cart = () => {
 
     }
       
-
-
     </DivCart>
   )
 
