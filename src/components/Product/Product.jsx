@@ -12,8 +12,8 @@ export const Product = ({ item }) => {
     });
   };
 
-  const Notify = () => {
-    toast.indo(`Somando Item carinho`, {
+  const Toast1 = () => {
+    toast.info(`Somando Item no carinho`, {
       autoClose: 600,
     });
   };
@@ -23,6 +23,7 @@ export const Product = ({ item }) => {
     const newCart = () =>{
       const newCart = filteredProducts.map((item) => {
         if (item.id === productId.id) {
+          Toast1()
           item.count +=1
           return item;
           //{..îtem, count +1} e nao precisa fazer 
