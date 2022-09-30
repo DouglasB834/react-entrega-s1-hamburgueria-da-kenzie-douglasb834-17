@@ -16,8 +16,8 @@ export const Header = () => {
     const newproduct = itens.toLowerCase().trim();
 
     const produto = search.filter((element) => {
-      const nome = element.name.toLowerCase();
-      const category = element.category.toLowerCase();
+      const nome = element.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g);
+      const category = element.category.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g);
 
       return nome.includes(newproduct) || category.includes(newproduct);
     });
@@ -38,9 +38,7 @@ export const Header = () => {
         <div className="search">
           <div>
             <input
-              type="text"
-              placeholder="Digite Pesquisa"
-              onChange={(event) => hendleItens(event.target.value)}
+              type="text" placeholder="Digite Pesquisa" onChange={(event) => hendleItens(event.target.value)}
             />
             <button type="submit" className="btnText">
               Pesquisa
