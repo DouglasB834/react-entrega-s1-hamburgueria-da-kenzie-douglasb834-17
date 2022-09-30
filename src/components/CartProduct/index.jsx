@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import { ProductContext } from '../../Context';
 export const  CartProduct = ({item, handleRemove}) => {
 
+
 const {filteredProducts, setFilteredProducts} = useContext(ProductContext)
 const remuveitem = (productId) =>{
   const newCart = filteredProducts.map((item) => {
@@ -14,12 +15,14 @@ const remuveitem = (productId) =>{
       return item
     }        
   });
+    
   const removerCart = newCart.filter(elemento=> elemento.count > 0)
   setFilteredProducts(removerCart)
+   
 }
 
 return ( 
-  <LiCart>
+  <LiCart className='animate__animated animate__backInLeft'>
     <figure>
       <img src={item.img} alt="img" />
     </figure>
@@ -27,7 +30,7 @@ return (
       <div>
         <h3>{item.name}</h3>
           <div>{item.count}</div>
-        <MdNoFood className='btnremove' id={item.id} onClick={()=> remuveitem(item)}/>
+        <MdNoFood id={item.id} onClick={()=> remuveitem(item)}/>
       </div>
       
       <span>{item.category}</span>

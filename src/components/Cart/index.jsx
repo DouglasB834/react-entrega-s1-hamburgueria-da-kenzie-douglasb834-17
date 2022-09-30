@@ -25,13 +25,12 @@ export const Cart = () => {
      }) 
      setFilteredProducts(removeItem)
   }
-  
+
   return (
     <DivCart>
       <div className="title2">
         <h2>Carinho de compras </h2>
        
-        <p>itens {filteredProducts.length}</p>
       </div>
       { filteredProducts.length > 0 ? (
         <>

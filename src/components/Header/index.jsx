@@ -7,7 +7,9 @@ import { toast } from "react-toastify";
 export const Header = () => {
   const { setProducts, search } = useContext(ProductContext);
   const Toast = () => {
-    toast.error(`item nao encontrado`);
+    toast.error(`item nao encontrado`,{
+      autoClose: 600,
+    });
   };
 
   const hendleItens = (itens) => {
