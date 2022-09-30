@@ -25,21 +25,19 @@ export const Cart = () => {
      }) 
      setFilteredProducts(removeItem)
   }
-  
+
   return (
     <DivCart>
       <div className="title2">
-        <h2>Carinho de compras </h2>
-       
-        <p>itens {filteredProducts.length}</p>
+        <h2>Carinho de compras </h2>       
       </div>
+
       { filteredProducts.length > 0 ? (
         <>
           <UlCart >        
           {
             filteredProducts.map((item, i)=> <CartProduct key={item.id}  item={item} handleRemove={handleRemove}/>)
-          }
-        
+          }        
         </UlCart>
 
         <CartTotal filteredProducts={filteredProducts} setFilteredProducts={setFilteredProducts}/>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import 'animate.css';
 export const LiCart = styled.li`
 min-width: 300px;
 width: 92%;
@@ -65,5 +65,7 @@ svg{
     color: #eb4235;
 
 }
+
+
 
 `
