@@ -1,11 +1,16 @@
 # Getting Started with Create React App
 
 # Links que vou usar e import 
+https://animate.style/
 import 'animate.css';
+
+Figman : https://www.figma.com/file/Nx4WZEFXnHzeFsxRaw8y18/M3---1B07---Entrega---Hamburgueria-da-Kenzie?node-id=0%3A1
+
+Axios : https://axios-http.com/docs/intro
 
 github : https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s1-hamburgueria-da-kenzie-douglasb834-17
 
-
+# API https://hamburgueria-kenzie-json-serve.herokuapp.com/products
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
